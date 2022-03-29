@@ -1,0 +1,60 @@
+excerpt_separator: ""
+highlighter: pygments
+markdown: kramdown
+highlighter: rouge
+title: "Gist of an Oracle DBA"
+tagline: "A log of my activities as an Oracle DBA"
+description: "Let me land my life of an Oracle DBA here."
+paginate: 5
+timezone: Africa/Lomé
+encoding: utf-8
+
+url: "https://dba.koffisani.dev"
+disqus_identfier: koffisani
+twitter_username: koffisani
+github_username:  koffisani
+linkedin_username: koffisani
+fb_username: koffisani
+adresse_web: "https://www.koffisani.dev"
+
+#Text extension activation
+services:
+  twig.extension.text:
+    class: Twig_Extensions_Extension_Text
+    tags:
+      - { name: twig.extension }
+
+
+
+#github: [metadata]
+#  kramdown:
+#    input: GFM
+#    hard_wrap: false
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-avatar
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-last-modified-at
+
+twitter:
+  username: koffisani
+
+facebook:
+  app_id: 1684328031825738
+  publisher: 1684328031825738
+
+logo: /img/sani-koffi.jpg
+social:
+  name: Koffi SANI
+  links:
+    - https://facebook.com/koffisani
+    - https://twitter.com/koffisani
+    - https://linkedin.com/in/koffisani
+    - https://plus.google.com/+koffisani
+  images: /img/koffi.png
+google_site_verification: googleaf6a5e28ab29fc8d.html

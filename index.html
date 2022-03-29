@@ -1,0 +1,41 @@
+---
+layout: default
+title: Accueil
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    <span class="post-date"><i class="fas fa-clock"></i> {{ post.date | date_to_string }}</span>
+    {% if post.categories %} &middot; <i class="fas fa-folder"></i> <small>{{ post.categories | join: ', ' }}</small>{% endif %}
+  {% if post.tags %} &middot; <i class="fas fa-tag"></i> <small>{{ post.tags | join: ', ' }}</small>{% endif %}
+
+    {{ post.content| split: '<!--more-->' | first }} <br/><a href="{{ post.url }}">Lire plus ...</a>
+  </div>
+  {% endfor %}
+</div>
+
+<nav aria-label="Page navigation">
+<ul class="pagination justify-content-end">
+  {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="/page{{paginator.next_page}}">Anciens</a></li>
+  {% else %}
+    <li class="page-item older disabled"><a href="#" class="page-link">Anciens</a></li>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <li class="page-item"><a class="page-link" href="/">Récents</a></li>
+    {% else %}
+      <li class="page-item"><a class="page-link" href="/page{{paginator.previous_page}}">Récents</a></li>
+    {% endif %}
+  {% else %}
+    <li class="page-item disabled"><a href="#" class="page-link">Récents</a></li>
+  {% endif %}
+</ul>
+</nav>
